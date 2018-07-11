@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                line-height: 20px;
+                line-height: 1.7em;
+            }
+        </style>
+    </head>
+    <body>
+        
+  
+            <h1> general Features</h1>
+            add admin: http://localhost:8080/rest/account/addAdmin/?acpassword=admin123&secret=57ACC7E7-387C-41C8-99A2-46E5DF37AC29
+         
+        
+        <br>add employee: http://localhost:8080/rest/account/register/?acpassword=mypw&acemail=employee@test.ch&actype=employee
+        
+        <br>add customer: http://localhost:8080/rest/account/register/?acpassword=mypw&acemail=customer@test.ch&actype=customer
+     
+        <br>   login: http://localhost:8080/rest/login/?acpassword=mypw&acemail=customer@test.ch
+        <br>
+        Register peronal data: http://localhost:8080/rest/person/register/?token=8ad4c965-82cd-433f-bce4-6cebfe8f9c4b.ac0d0917-d565-467d-9da9-45abd9d14adc&firstname=John&lastname=Deo
+        <br>
+        Register Address:http://localhost:8080/rest/address/register/?token=8ad4c965-82cd-433f-bce4-6cebfe8f9c4b.ac0d0917-d565-467d-9da9-45abd9d14adc&street=hochstrasse42&postcode=4567&location=basel
+        <br>
+        get Address: Address:http://localhost:8080/rest/address/my/?token=8ad4c965-82cd-433f-bce4-6cebfe8f9c4b.ac0d0917-d565-467d-9da9-45abd9d14ad
+        <br>
+        get Personal data: http://localhost:8080/rest/person/my/?token=8ad4c965-82cd-433f-bce4-6cebfe8f9c4b.ac0d0917-d565-467d-9da9-45abd9d14adc
+    
+            <h1> Customer Features</h1>
+            login: http://localhost:8080/rest/login/?acpassword=mypw&acemail=customer@test.ch
+            <br>
+            register an order: http://localhost:8080/rest/order/register/?token=15395f86-64b3-4ae4-8079-4b9080230014.b106b60b-3f3d-4034-b379-d6a9cb52dac5&hours=4&description=wohnung%20muss%20gereignet%20werden
+            <br>
+            get a list of all order: http://localhost:8080/rest/order/my/?token=15395f86-64b3-4ae4-8079-4b9080230014.b106b60b-3f3d-4034-b379-d6a9cb52dac5
+     
+            <h1> Admin Features</h1>
+            Login as admin: http://localhost:8080/rest/login/?acpassword=admin123&acemail=admin@cleaningasservice.ch
+            <br> get a list of all accounts: http://localhost:8080/rest/account/getAll/?token=00fdaf52-3ab7-46f9-bc92-b333f5095172.4f93d598-81f5-4591-9672-0b980596d46e
+            get a list of all employee: http://localhost:8080/rest/employee/getAll/?token=00fdaf52-3ab7-46f9-bc92-b333f5095172.4f93d598-81f5-4591-9672-0b980596d46e
+            <br>
+            get a list of all customers: http://localhost:8080/rest/customer/getAll/?token=00fdaf52-3ab7-46f9-bc92-b333f5095172.4f93d598-81f5-4591-9672-0b980596d46e
+            <br>
+            get a list of all orders: http://localhost:8080/rest/order/getAll/?token=00fdaf52-3ab7-46f9-bc92-b333f5095172.4f93d598-81f5-4591-9672-0b980596d46e
+            <br>
+            get a list of all work: http://localhost:8080/rest/work/getAll/?token=00fdaf52-3ab7-46f9-bc92-b333f5095172.4f93d598-81f5-4591-9672-0b980596d46e
+            <br>
+            assign a work to an employee: http://localhost:8080/rest/work/assign/?token=00fdaf52-3ab7-46f9-bc92-b333f5095172.4f93d598-81f5-4591-9672-0b980596d46e&assigneeId=3350677a-966a-4fa7-9c99-7724228b5bb9&orderId=4bd3ad26-fd5b-4251-b847-46fa0c66bbbb
+            <br>
+            update order payment status: http://localhost:8080/rest/order/payment?token=2d458c83-4395-4914-954b-765c853b0309.b0ac1570-007b-4e97-bc7c-580989f1ee09&orderId=1d27b982-101a-450f-8c4e-0a1650e80447&paymentStatus=late
+            <br>
+            update order status: http://localhost:8080/rest/order/status?token=2d458c83-4395-4914-954b-765c853b0309.b0ac1570-007b-4e97-bc7c-580989f1ee09&orderId=1d27b982-101a-450f-8c4e-0a1650e80447&status=inprogress
+            <h1>Employee Features</h1>
+            login: http://localhost:8080/rest/login/?acpassword=mypw&acemail=employee@test.ch
+            <br>
+            get list of work: http://localhost:8080/rest/work/my/?token=92be90a5-a643-4ab7-bc29-0bb091b1ffd9.ced0120a-68d8-43b5-97d2-3aee6172c22e
+            <br>
+            stamp in:http://localhost:8080/rest/stamp/in/?token=92be90a5-a643-4ab7-bc29-0bb091b1ffd9.ced0120a-68d8-43b5-97d2-3aee6172c22e&customerId=72c0dc0f-c88b-4beb-bff0-2873c0be4651
+            <br>
+            stamp out:http://localhost:8080/rest/stamp/out/?token=92be90a5-a643-4ab7-bc29-0bb091b1ffd9.ced0120a-68d8-43b5-97d2-3aee6172c22e
+            <br>
+            get list of stamps:http://localhost:8080/rest/stamp/my/?token=92be90a5-a643-4ab7-bc29-0bb091b1ffd9.ced0120a-68d8-43b5-97d2-3aee6172c22e
+    
+    </body>
+</html> 

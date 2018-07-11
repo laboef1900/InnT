@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TimetrackingActivity"
+    >
+    <android.support.v7.widget.Toolbar
+
+        android:id="@+id/my_awesome_toolbar"
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:layout_width="match_parent"
+        app:titleTextColor="@color/colorwhite"
+        android:minHeight="50dp"
+        android:background="?attr/colorPrimary"
+        />
+
+    <include layout="@layout/content_timetracking" />
+
+</android.support.design.widget.CoordinatorLayout>
